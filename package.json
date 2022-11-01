@@ -1,0 +1,41 @@
+{
+    "name": "boosted-sorter",
+    "version": "1.0.0",
+    "description": "Sort an array of objects by one or more properties.",
+    "main": "index.js",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {},
+    "repository": "git+https://github.com/Rustam-Abrahamyan/boosted-sorter.git",
+    "author": "Rustam Abrahamyan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Rustam-Abrahamyan/boosted-sorter/issues"
+    },
+    "homepage": "https://github.com/Rustam-Abrahamyan/boosted-sorter#readme",
+    "keywords": [
+        "arr",
+        "array",
+        "asc",
+        "ascend",
+        "ascending",
+        "desc",
+        "descend",
+        "descending",
+        "multiple",
+        "obj",
+        "object",
+        "order",
+        "ordered",
+        "field",
+        "fields",
+        "prop",
+        "properties",
+        "property",
+        "sort",
+        "sorter",
+        "sorted",
+        "sorting"
+    ]
+}
