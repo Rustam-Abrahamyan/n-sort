@@ -8,6 +8,7 @@ import DateTimeSorter from "./src/data-time";
  * @param {Object} properties
  * @param {('stringWithNumber'|'string'|'number'|'dateTime')} type
  * @param {String} orderBy
+ * @param {Function} clb
  * @returns {Array|Object[]}
  */
 const BoostedSorter = ({
@@ -15,8 +16,9 @@ const BoostedSorter = ({
     type = "stringWithNumber",
     orderBy = "asc",
     properties = [],
+    clb = () => undefined,
 }) => {
-    direction = orderBy === "asc";
+    const direction = orderBy === "asc";
 
     return data.sort((a, b) => {
         for (const property of properties) {
@@ -27,13 +29,14 @@ const BoostedSorter = ({
                         b,
                         property,
                         direction,
+                        clb,
                     });
                 if (type === "string")
-                    return StringSorter({ a, b, property, direction });
+                    return StringSorter({ a, b, property, direction, clb });
                 if (type === "number")
-                    return NumberSorter({ a, b, property, direction });
+                    return NumberSorter({ a, b, property, direction, clb });
                 if (type === "dateTime")
-                    return DateTimeSorter({ a, b, property, direction });
+                    return DateTimeSorter({ a, b, property, direction, clb });
             }
         }
     });

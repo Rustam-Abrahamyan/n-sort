@@ -14,7 +14,9 @@ const regDigit = /\d/;
  * @param {String} property
  * @returns {Boolean}
  */
-const StringWithNumberSorter = ({ a, b, direction, property }) => {
+const StringWithNumberSorter = ({ a, b, direction, property, clb }) => {
+    if (typeof clb === "function" && clb(a, b)) return clb(a, b);
+    
     a = (isObject(a) ? a[property] : a).toUpperCase();
     b = (isObject(b) ? b[property] : b).toUpperCase();
 

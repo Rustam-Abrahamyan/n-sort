@@ -1,17 +1,7 @@
-# boosted-sorter
-
-### Getting Started
-
-Install with NPM:
-
-```bash
-$ npm install boosted-sorter --save
-```
-
-### Usage
+# n-sort
 
 ```js
-import boostedSorter from "boosted-sorter";
+import nSort from "n-sort";
 
 const users = [
     {
@@ -41,7 +31,7 @@ const users = [
     },
 ];
 
-boostedSorter({
+nSort({
     data: users,
     properties: ["username"],
     type: "string",
@@ -82,7 +72,7 @@ boostedSorter({
 ### Options
 
 ```js
-boostedSorter({
+nSort({
     data: [], // The array of objects to sort
     properties: [], // Object properties to sort
     type: "stringWithNumber", // enum('stringWithNumber'|'string'|'number'|'dateTime'), by default 'stringWithNumber'

@@ -1,5 +1,5 @@
 {
-    "name": "boosted-sorter",
+    "name": "n-sort",
     "version": "1.0.0",
     "description": "Sort an array of objects by one or more properties.",
     "main": "index.js",
@@ -7,13 +7,13 @@
         "node": ">=0.10.0"
     },
     "scripts": {},
-    "repository": "git+https://github.com/Rustam-Abrahamyan/boosted-sorter.git",
+    "repository": "git+https://github.com/Rustam-Abrahamyan/n-sort.git",
     "author": "Rustam Abrahamyan",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Rustam-Abrahamyan/boosted-sorter/issues"
+        "url": "https://github.com/Rustam-Abrahamyan/n-sort/issues"
     },
-    "homepage": "https://github.com/Rustam-Abrahamyan/boosted-sorter#readme",
+    "homepage": "https://github.com/Rustam-Abrahamyan/n-sort#readme",
     "keywords": [
         "arr",
         "array",
@@ -36,6 +36,7 @@
         "sort",
         "sorter",
         "sorted",
-        "sorting"
+        "sorting",
+        "natural"
     ]
 }

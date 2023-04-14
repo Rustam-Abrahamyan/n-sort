@@ -7,7 +7,9 @@ import { isObject } from "./utils";
  * @param {String} property
  * @returns {Boolean}
  */
-const NumberSorter = ({ a, b, property, direction }) => {
+const NumberSorter = ({ a, b, property, direction, clb }) => {
+    if (typeof clb === "function" && clb(a, b)) return clb(a, b);
+
     a = isObject(a) ? a[property] : a;
     b = isObject(b) ? b[property] : b;
 

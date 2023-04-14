@@ -7,7 +7,9 @@ import { isObject } from "./utils";
  * @param {String} property
  * @returns {Boolean}
  */
-const DateTimeSorter = ({ a, b, direction, property }) => {
+const DateTimeSorter = ({ a, b, direction, property, clb }) => {
+    if (typeof clb === "function" && clb(a, b)) return clb(a, b);
+
     const a_state = isObject(a) ? a[property] : a;
     const b_state = isObject(b) ? b[property] : b;
 
